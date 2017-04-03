@@ -2,6 +2,7 @@ package ar.edu.poi.controller
 
 import ar.edu.RepoUsuario.RepositorioUsuario
 import ar.edu.poi.domain.PoiBootstrap
+import ar.edu.poi.domain.UtilitiesDetallesPoi
 import ar.edu.singleton.RepositorioSingleton
 import ar.edu.usuario.Usuario
 import org.uqbar.xtrest.api.Result
@@ -12,7 +13,6 @@ import org.uqbar.xtrest.api.annotation.Get
 import org.uqbar.xtrest.api.annotation.Put
 import org.uqbar.xtrest.http.ContentType
 import org.uqbar.xtrest.json.JSONUtils
-import ar.edu.poi.domain.UtilitiesDetallesPoi
 
 @Controller
 class PoiController {
@@ -23,7 +23,7 @@ class PoiController {
 		PoiBootstrap.instance.run
 		PoiBootstrap.instance.agregarPoisFavoritosAUsuarios
 		PoiBootstrap.instance.agregarCalificacionesALosPois
-		XTRest.start(PoiController, 9006)
+		XTRest.start(PoiController, 9000)
 
 	}
 
