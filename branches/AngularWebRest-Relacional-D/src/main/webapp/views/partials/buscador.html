@@ -1,0 +1,84 @@
+<div class="banner">
+</div>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <button id="btnSlide" class="btn btn-primary formBusquedaFixed" ng-click="visibility=!visibility"><i class="fa fa-angle-double-down" aria-hidden="true"></i> Activar/Desactivar buscador</button>
+        <br>
+        <br>
+        <div id="sliderIzq">
+            <div class="col-lg-4 formBusquedaFixed fade" ng-show="visibility">
+                <!--Card-->
+                <div class="card">
+                    <h4 class="card-header primary-color white-text">Buscador de POIS</h4>
+                    <!--Card content-->
+                    <div class="card-block">
+                        <!--Form-->
+                        <!-- Form Nombre y Hora -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="md-form">
+                                    <i class="fa fa-map-marker prefix"></i>
+                                    <input ng-model="valorDeBusqueda" type="text" id="Nombre" class="form-control">
+                                    <label for="form3">Nombre</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fin Form Nombre y Hora -->
+                    </div>
+                </div>
+                <!--/.Card content-->
+            </div>
+            <!--/.Card-->
+        </div>
+    </div>
+    <!-- final del form de busqueda -->
+</div>
+<!-- fin row -->
+</div>
+<!-- fin content fluid -->
+
+<!--Card-->
+<div class="container-fluid">
+    <div class="row full-width">
+        <div class="col-xs-8 right">
+            <div class="card">
+                <h4 class="card-header primary-color white-text">Resultados</h4>
+                <table class="table product-table">
+                    <thead>
+                        <tr class="table_size_head">
+                            <th class="trtd-cel-invisible" width="50%"></th>
+                            <th width="25%">Tipo y Nombre</th>
+                            <th width="25%">Dirección</th>
+                            <th width="10%">Favorito</th>
+                            <th width="10%">Cercania</th>
+                            <th width="10%">Disponible</th>
+                        </tr>
+                    </thead>
+                    <tr data-ng-repeat="poi in buscadorCtrl.buscador | filter:valorDeBusqueda">
+                        <th scope="row" class="trtd-cel-invisible">
+                            <div class="view hm-zoom">
+                                <img ng-src="/assets/img/{{poi.tipo}}.jpg" class="img-fluid " alt="">
+                                <a ui-sref="main.detallesPoi({id: poi.id})" class="waves-light">
+                                    <div class="mask">
+                                    </div>
+                                </a>
+                            </div>
+                        </th>
+                        <td>
+                            <h5><strong>{{poi.tipo}}</strong></h5>
+                            <p class="text-muted"><a ui-sref="main.detallesPoi({id: poi.id})" class="waves-light">{{poi.nombre}}</a></p>
+                        </td>
+                        <td>{{poi.direccion}}</td>
+                        <td>{{buscadorCtrl.favoritos(poi.id)?'SI':'NO'}}</td>
+                        <td>
+                            <span class="qty">{{poi.cercania?'SI':'NO'}}</span>
+                        </td>
+                        <td>{{poi.disponibilidad?'SI':'NO'}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

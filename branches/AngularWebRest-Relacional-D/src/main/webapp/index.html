@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="poiApp">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Points of Interest</title>
+    <link rel="shortcut icon" href="/assets/img/pois-icono.png">
+
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="assets/css/mdb.min.css" rel="stylesheet">
+
+    <!-- MAIN css -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- ESTRELLA CSS -->
+    <link href="assets/css/star.css" rel="stylesheet">
+
+    <!-- para inputs checkboxs -->
+    <link href="assets/magic-check-master/css/magic-check.css" rel="stylesheet">
+
+    <!-- PURE CSS -->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/layouts/marketing.css">
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+    <div ui-view='layout'></div>
+
+
+
+
+    <!-- SCRIPTS -->
+
+    <!-- ANGULAR  -->
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <!-- UNDERSCORE -->
+    <script src="node_modules/underscore/underscore-min.js"></script>
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/tether.min.js"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/tether.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+
+
+    <!-- Nuestros JS - Angular -->
+    <script src="js/app/main/app.js"></script>
+    <script src="js/app/controllers/loginController.js"></script>
+    <script src="js/app/controllers/buscadorController.js"></script>
+    <script src="js/app/controllers/poisController.js"></script>
+    <script src="js/app/controllers/sobreElProyecto.js"></script>
+    <script src="js/app/services/usuarioService.js"></script>
+    <script src="js/app/services/buscadorService.js"></script>
+    <script src="js/app/services/detallesService.js"></script>
+    <script src="js/app/main/errorHandler.js"></script>
+    <script src="js/domain/poi.js"></script>
+    <script src="js/domain/colectivo.js"></script>
+    <script src="js/app/main/routes.js"></script>
+    <script src="js/app/routes/login.js"></script>
+    <script src="js/app/routes/detallesPoi.js"></script>
+    <script src="js/app/routes/buscador.js"></script>
+    <script src="js/app/routes/sobreElProyecto.js"></script>
+    <script src="js/domain/usuario.js"></script>
+    <script src="js/domain/calificacion.js"></script>
+    <script src="js/domain/banco.js"></script>
+    <script src="js/domain/cgp.js"></script>
+    <script src="js/domain/direccion.js"></script>
+    <script src="js/domain/geodds.js"></script>
+    <script src="js/domain/gps.js"></script>
+    <script src="js/domain/horarioDeAtencion.js"></script>
+    <script src="js/domain/localComercial.js"></script>
+    <script src="js/domain/review.js"></script>
+    <script src="js/domain/datosBuscador.js"></script>
+
+    <!-- efecto boton de buscador -->
+    <script>
+        $(document).ready(function() {
+            $('#btnSlide').click(function() {
+                $("#sliderIzq").show(1000, function() {
+                    $('#btnSlide').hide(1000);
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

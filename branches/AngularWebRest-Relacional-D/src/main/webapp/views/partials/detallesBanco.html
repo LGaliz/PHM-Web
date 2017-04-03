@@ -1,0 +1,41 @@
+        <div class="pure-g">
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <h3 class="content-subhead">
+              <i class="fa fa-map"></i>
+                Dirección
+            </h3>
+                <p>
+                    {{poisCtrl.poi.direccion}}
+                </p>
+            </div>
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <h3 class="content-subhead">
+                <i class="fa fa-cubes"></i>
+                Barrio
+            </h3>
+                <p>
+                    {{poisCtrl.poi._direccion.barrio}}
+                </p>
+            </div>
+
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <h3 class="content-subhead">
+                <i class="fa fa-hand-stop-o "></i>
+                Servicios
+            </h3>
+                <ul data-ng-repeat="servicio in poisCtrl.poi.servicios">
+                    <li>{{servicio}}</li>
+                </ul>
+            </div>
+
+            <!-- extra -->
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <h3 class="content-subhead">
+                <i class="fa fa-clock-o"></i>
+                Horarios
+            </h3>
+            <ul>
+                <li>{{poisCtrl.poi.horario.inicio}} a {{poisCtrl.poi.horario.fin}}</li>
+              </ul>
+            </div>
+        </div>
