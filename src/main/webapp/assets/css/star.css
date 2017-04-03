@@ -1,0 +1,23 @@
+.calificacion-puntaje label {
+    font-size: 1.5em;
+}
+.calificacion-puntaje input[type="radio"] {
+    display: none;
+}
+.calificacion-puntaje {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    padding-left: 16px;
+}
+.calificacion-puntaje label:hover {
+    color: #ffc107!important;
+    /*amber color*/
+}
+.calificacion-puntaje label:hover~label {
+    color: #ffc107!important;
+    /*amber color*/
+}
+.calificacion-puntaje input[type="radio"]:checked~label {
+    color: #ffc107!important;
+    /*amber color*/
+}

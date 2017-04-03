@@ -1,0 +1,284 @@
+/* Utilidades Generales */
+
+.right {
+    float: right;
+}
+html, body, .view {
+    height: 100%;
+}
+.center {
+    text-align: center;
+}
+.clear {
+    clear: both;
+    margin-top: 150px;
+}
+
+
+.width_20{width:20%; background-color: #df8b13;}
+.width_40{width:40%; background-color: #d6d037;}
+.width_65{width:65%;  background-color: #5bc0de;}
+.width_80{width:80%;  background-color: #c21d99;}
+.width_100{width:100%; background-color: #5cb85c;}
+.width_100_0{width:100%;   background-color: #d9534f;}
+
+/* fin utilidades generales */
+
+
+/* css  SobreNosotros */
+
+.saltoTablaIconos {
+    height: 50px;
+}
+
+/* fin de css SobreNosotros
+
+/* css para buscador */
+
+.banner {
+    background: transparent url('../img/planetario.jpg') 0 0 no-repeat fixed;
+    text-align: center;
+    background-size: contain;
+    height: 200px;
+    width: 100%;
+    margin-top: 3.4em;
+    margin-bottom: 0.5em;
+    display: table;
+}
+.banner-head {
+    display: table-cell;
+    vertical-align: middle;
+    margin-bottom: 0;
+    font-size: 2em;
+    color: white;
+    font-weight: 500;
+    text-shadow: 0 1px 1px black;
+}
+.formBusquedaFixed {
+    position: fixed;
+}
+#btnSlide {
+    display: block;
+}
+#sliderIzq {
+    position: fixed;
+    left: 0;
+    /*display: none;*/
+    /*overflow: visible;*/
+    z-index: 10000000;
+    /*se oculta por la izquierda*/
+    /*right: 0;  se oculta por la derecha */
+}
+.fade.ng-hide {
+    transition: 0.5s linear all;
+    opacity: 0;
+}
+.fade {
+    transition: 0.5s linear all;
+    opacity: 100;
+}
+@media only screen and (max-width: 1000px) {
+    #btnSlide {
+        display: block;
+    }
+    .full-width {}
+    .full-width .col-xs-8 {
+        width: 100%;
+    }
+    .table_size_head {
+        font-size: 0.9em;
+    }
+    #sliderIzq {
+        position: static;
+        left: 0;
+        display: block;
+        /*se oculta por la izquierda*/
+        /*right: 0;  se oculta por la derecha */
+    }
+    .trtd-cel-invisible {
+        display: none;
+        visibility: hidden;
+    }
+    .formBusquedaFixed {
+        position: static;
+    }
+    .banner {
+        background: transparent url('../img/planetario-cel.png') 0 0 no-repeat fixed;
+        text-align: center;
+        background-size: contain;
+        height: 200px;
+        width: 100%;
+        margin-top: 3.4em;
+        margin-bottom: 0.5em;
+        display: table;
+    }
+    .banner-head {
+        display: table-cell;
+        vertical-align: middle;
+        margin-bottom: 0;
+        font-size: 2em;
+        color: white;
+        font-weight: 500;
+        text-shadow: 0 1px 1px black;
+    }
+}
+
+/* fin de css para buscador */
+
+
+/* css para detalles **/
+
+.widget-wrapper {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 2rem;
+}
+.reviews {
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+#map-container {
+    margin: 50px 5px 5px 5px;
+}
+.check-favorito {
+    display: inline-block;
+}
+.check-favorito input[type="checkbox"] {
+    display: none;
+}
+.check-favorito input[type="checkbox"]+label span {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    background: url('../img/icono_check_favorito.png') left top no-repeat;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.check-favorito input[type="checkbox"]:checked+label span {
+    background: url('../img/icono_check_favorito_checked.png') left top no-repeat;
+}
+
+/* fin de css para detalles */
+
+
+/* Navigation (lo de arriba)*/
+
+.navbar {
+    background-color: transparent;
+}
+.scrolling-navbar {
+    -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
+}
+.top-nav-collapse {
+    background-color: #1C2331;
+}
+footer.page-footer {
+    background-color: #1C2331;
+    margin-top: -1px;
+}
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #1C2331;
+    }
+}
+.img-usuario {
+    border-radius: 100%;
+    width: 1.7em;
+    height: 1.7em;
+    display: inline;
+}
+
+/* css para Login*/
+
+.flex-center {
+    color: #fff;
+}
+.view {
+    background-color: rgba(23, 24, 23, 0.77);
+    background: url("../img/bsas.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* fin css para LogIn */
+
+
+/* barra de progreso boostrap 3.3.7*/
+
+.progress {
+    height: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1)
+}
+.progress-bar {
+    float: left;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease
+}
+.progress-bar-striped, .progress-striped .progress-bar {
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    -webkit-background-size: 40px 40px;
+    background-size: 40px 40px
+}
+.progress-bar.active, .progress.active .progress-bar {
+    -webkit-animation: progress-bar-stripes 2s linear infinite;
+    -o-animation: progress-bar-stripes 2s linear infinite;
+    animation: progress-bar-stripes 2s linear infinite
+}
+.progress-bar-success {
+    background-color: #5cb85c
+}
+.progress-striped .progress-bar-success {
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent)
+}
+.progress-bar-info {
+    background-color: #5bc0de
+}
+.progress-striped .progress-bar-info {
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent)
+}
+.progress-bar-warning {
+    background-color: #f0ad4e
+}
+.progress-striped .progress-bar-warning {
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent)
+}
+.progress-bar-danger {
+    background-color: #d9534f
+}
+.progress-striped .progress-bar-danger {
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent)
+}
+
+/*fin de barra de progreso*/

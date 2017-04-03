@@ -1,0 +1,40 @@
+<div class="view hm-black-strong" style="margin-bottom:-150px; height:1200px;">
+    <div class="full-bg-img flex-center">
+        <div class="card-block">
+
+            <div class="text-xs-center">
+                <h3 style="color:#0275d8"><i class="fa fa-map-o"></i> Login:</h3>
+                <hr class="m-t-2 m-b-2">
+                <div class="alert alert-danger animate-repeat" ng-repeat="alerta in loginCtrl.alertas">{{alerta}}</div>
+                <hr class="m-t-2 m-b-2">
+            </div>
+
+            <!--Login-->
+            <form ng-submit="loginCtrl.iniciarSesion()">
+                <div class="md-form">
+                    <i class="fa fa-user prefix"></i>
+                    <input type="text" id="form2" class="form-control" style="color:#33b5e5" ng-model="loginCtrl.cuenta">
+                    <label for="form2">Cuenta</label>
+                </div>
+
+                <div class="md-form">
+                    <i class="fa fa-lock prefix"></i>
+                    <input type="password" id="form4" class="form-control" style="color:#33b5e5" ng-model="loginCtrl.pass">
+                    <label for="form4">Clave</label>
+                </div>
+
+                <div class="text-xs-right">
+                    <button type="submit" class="btn btn-info">Ingresar</button>
+                </div>
+            </form>
+            <!-- Fin Login -->
+            
+            <br>
+            <div class="right">
+                <p>¿No tenés cuenta? <a ui-sref="registrarse">Registrate</a></p>
+                <p>Recuperar <a ui-sref="olvideContraseña">Contraseña</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/.Mask-->
