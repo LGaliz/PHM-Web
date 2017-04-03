@@ -1,0 +1,35 @@
+2017-04-03 15:19:09 [main] INFO  Version:37 - HHH000412: Hibernate Core {5.1.2.Final}
+2017-04-03 15:19:09 [main] INFO  Environment:213 - HHH000206: hibernate.properties not found
+2017-04-03 15:19:09 [main] INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2017-04-03 15:19:11 [main] INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-04-03 15:19:12 [main] WARN  pooling:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2017-04-03 15:19:12 [main] INFO  pooling:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/pois]
+2017-04-03 15:19:12 [main] INFO  pooling:136 - HHH10001001: Connection properties: {user=root, password=****}
+2017-04-03 15:19:12 [main] INFO  pooling:141 - HHH10001003: Autocommit mode: false
+2017-04-03 15:19:12 [main] INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-04-03 15:19:13 [main] INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-04-03 15:19:17 [main] INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: ar.edu.calificaciones.Review (class must be instantiated by Interceptor)
+2017-04-03 15:19:17 [main] INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: ar.edu.POIs.Rubro (class must be instantiated by Interceptor)
+2017-04-03 15:19:18 [main] INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4ca0f9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2017-04-03 15:19:20 [main] INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1a1da6] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2017-04-03 15:19:24 [main] INFO  SchemaCreatorImpl:485 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@492f2a'
+2017-04-03 15:19:24 [main] WARN  SessionFactoryRegistry:101 - HHH000277: Could not bind factory to JNDI
+org.hibernate.engine.jndi.JndiException: Error parsing JNDI name [java:/hibernate/SessionFactory]
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:124) ~[hibernate-core-5.1.2.Final.jar:5.1.2.Final]
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.bind(JndiServiceImpl.java:140) ~[hibernate-core-5.1.2.Final.jar:5.1.2.Final]
+	at org.hibernate.internal.SessionFactoryRegistry.addSessionFactory(SessionFactoryRegistry.java:88) [hibernate-core-5.1.2.Final.jar:5.1.2.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:523) [hibernate-core-5.1.2.Final.jar:5.1.2.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:465) [hibernate-core-5.1.2.Final.jar:5.1.2.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:711) [hibernate-core-5.1.2.Final.jar:5.1.2.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:727) [hibernate-core-5.1.2.Final.jar:5.1.2.Final]
+	at ar.edu.singleton.RepoDefault.<clinit>(RepoDefault.java:33) [classes/:?]
+	at ar.edu.poi.domain.PoiBootstrap.<init>(PoiBootstrap.java:55) [classes/:?]
+	at ar.edu.poi.domain.PoiBootstrap.getInstance(PoiBootstrap.java:45) [classes/:?]
+	at ar.edu.poi.controller.PoiController.main(PoiController.java:36) [classes/:?]
+Caused by: javax.naming.NoInitialContextException: Need to specify class name in environment or system property, or as an applet parameter, or in an application resource file:  java.naming.factory.initial
+	at javax.naming.spi.NamingManager.getInitialContext(Unknown Source) ~[?:1.8.0_121]
+	at javax.naming.InitialContext.getDefaultInitCtx(Unknown Source) ~[?:1.8.0_121]
+	at javax.naming.InitialContext.getURLOrDefaultInitCtx(Unknown Source) ~[?:1.8.0_121]
+	at javax.naming.InitialContext.getNameParser(Unknown Source) ~[?:1.8.0_121]
+	at org.hibernate.engine.jndi.internal.JndiServiceImpl.parseName(JndiServiceImpl.java:118) ~[hibernate-core-5.1.2.Final.jar:5.1.2.Final]
+	... 10 more
